@@ -101,8 +101,8 @@ bindEvents: function() {
     // function, we must explicity call 'app.receivedEvent(...);'
 onDeviceReady: function() {
     var client = new Apigee.Client({
-                                   orgName:"mdobson",
-                                   appName:"instapic-dev",
+                                   orgName:"YOUR ORGNAME",
+                                   appName:"YOUR APPNAME",
                                    logging:true
                                    });
     var pushNotification = window.plugins.pushNotification;
@@ -111,7 +111,7 @@ onDeviceReady: function() {
     function tokenHandler(status) {
       if(status) {
         var options = {
-          notifier:"instapicdev",
+          notifier:"YOUR NOTIFIER",
           deviceToken:status
         };
 
@@ -141,7 +141,7 @@ onDeviceReady: function() {
                   
                   var devicePath = "devices/"+client.getDeviceUUID()+"/notifications";
                   var options = {
-                  notifier:"instapicdev",
+                  notifier:"YOUR NOTIFIER",
                   path:devicePath,
                   message:"hello world from JS"
                   };
